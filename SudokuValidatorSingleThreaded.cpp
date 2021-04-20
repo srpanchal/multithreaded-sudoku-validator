@@ -22,7 +22,6 @@ int sudoku[9][9] = {
 	{2, 8, 5, 4, 7, 3, 9, 1, 6}
 };
 
-
 bool check3x3(int row, int col){
     int digits[9] = {0};
 	int i,j;
@@ -96,6 +95,6 @@ int main(){
     auto end_time = std::chrono::high_resolution_clock::now();
     auto time = end_time - start_time;
 	cout << "Sudoku solution is valid!" << endl;
-    cout << "Time taken = " << std::chrono::duration_cast<std::chrono::microseconds>(time).count() << " microseconds." << endl;
+    cout << "Time taken by 1 thread = " << std::chrono::duration_cast<std::chrono::microseconds>(time).count() << " microseconds." << endl;
 	return EXIT_SUCCESS;
 }

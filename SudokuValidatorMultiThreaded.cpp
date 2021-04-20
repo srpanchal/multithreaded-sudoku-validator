@@ -121,6 +121,6 @@ int main(){
 	auto end_time = std::chrono::high_resolution_clock::now();
     auto time = end_time - start_time;
 	cout << "Sudoku solution is valid!" << endl;
-	cout << "Time taken = " << std::chrono::duration_cast<std::chrono::microseconds>(time).count() << " microseconds." << endl;
+	cout << "Time taken by 27 threads = " << std::chrono::duration_cast<std::chrono::microseconds>(time).count() << " microseconds." << endl;
 	return EXIT_SUCCESS;
 }
