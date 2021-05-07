@@ -3,6 +3,7 @@
 #include <pthread.h>
 #include <iostream>
 #include <chrono>
+#include <thread>
 
 using namespace std;
 
@@ -122,5 +123,6 @@ int main(){
     auto time = end_time - start_time;
 	cout << "Sudoku solution is valid!" << endl;
 	cout << "Time taken by 27 threads = " << std::chrono::duration_cast<std::chrono::microseconds>(time).count() << " microseconds." << endl;
+	cout << "CPU cores: = " << std::thread::hardware_concurrency() << endl;
 	return EXIT_SUCCESS;
 }
